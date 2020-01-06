@@ -4,7 +4,7 @@ using namespace std;
 
 void chapter_1(){
     string name;
-    cout << "Введите свое имя : ";
+    cout << "Enter your name : ";
     cin >> name ;
 
     string gretting = "Grettings, "+ name +"!";
@@ -23,7 +23,7 @@ void chapter_1(){
 
 void chapter_2(){
     string name;
-    cout << "Введите свое имя : ";
+    cout << "Enter your name : ";
     cin >> name ;
     const string gretting = "Grettings, "+ name +"!";
 
