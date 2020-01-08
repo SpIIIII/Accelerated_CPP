@@ -27,19 +27,38 @@ void chapter_2(){
     cin >> name ;
     const string gretting = "Grettings, "+ name +"!";
 
-    const int pad = 1;
+    int pad = 0;
+    cout << "Set the pad: ";
+    cin >> pad;
+    
     const int rows = pad*2+3;
-
     int r =0;
-    while (r!=rows){
+    
+    const string::size_type cols = gretting.size()+ pad*2+2;
+    string::size_type c = 0; 
+
+    for (r;r < rows;++r){
+        while (c < cols){
+            if (r == pad+1 && c == pad+1){
+                cout << gretting;
+                c+= gretting.size();
+            }else{
+                if (r == 0 || r == rows-1 || c ==0 || c == cols-1){
+                    cout <<'*';}
+                else{
+                    cout << ' ';} 
+                ++c;
+            }
+            
+        }
         cout<<endl;
-        ++r;
+        c=0;
     }
 
 }
 
 int main(){
-    chapter_1();
+    // chapter_1();
     chapter_2();
 
     return 0;
